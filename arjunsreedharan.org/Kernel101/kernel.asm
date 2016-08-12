@@ -1,5 +1,5 @@
 ;; kernel.asm
-;; authot: Mehmet kif TAŞOVA
+;; author: Mehmet kif TAŞOVA
 ;; makiftasova@gmail.com
 
 

@@ -1,6 +1,6 @@
 ;; kernel.asm
 ;; Copyright (C) 2016 Mehmet Akif TAŞOVA
-;; License: GPL Versiom 3 or any later version
+;; License: GPL Version 3 or any later version
 
 
 ;; NASM directives

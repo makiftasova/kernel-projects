@@ -1,7 +1,7 @@
 /*
  * kernel.c
- * Author: Mehmet AKif TAŞOVA
- * makiftasova@gmail.com
+ * Copyright (C) 2016 Mehmet Akif TAŞOVA
+ * License: GPL Version 3 or any later version
  */
 
  /* KERNEL_PUTS ATTRIBUTES
