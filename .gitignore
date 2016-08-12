@@ -37,3 +37,5 @@
 
 # Kernel Images
 *.bin
+*.kernel
+*.iso
