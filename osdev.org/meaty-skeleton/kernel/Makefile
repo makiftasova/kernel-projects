@@ -12,7 +12,7 @@ EXEC_PREFIX?=$(PREFIX)
 BOOTDIR?=$(EXEC_PREFIX)/boot
 INCLUDEDIR?=$(PREFIX)/include
 
-CFLAGS:=$(CFLAGS) -nostdlib -ffreestanding -fbuiltin -Wall -Wextra -mcmodel=large
+CFLAGS:=$(CFLAGS) -ffreestanding -fbuiltin -Wall -Wextra
 CPPFLAGS:=$(CPPFLAGS) -D__is_tasovix_kernel -Iinclude
 LDFLAGS:=$(LDFLAGS)
 LIBS:=$(LIBS) -nostdlib -lk -lgcc
@@ -51,15 +51,11 @@ all: tasovix.kernel
 
 .PHONY: all clean install install-headers install-kernel
 
-as-obj:
-	$(AS) $(ARCHDIR)/crti.S -o $(CRTI_OBJ)
-	$(AS) $(ARCHDIR)/crtn.S -o $(CRTN_OBJ)
-
 tasovix.kernel: $(OBJ_LINK_LIST) $(ARCHDIR)/linker.ld
 	$(CC) -T $(ARCHDIR)/linker.ld -o $@ $(CFLAGS) $(OBJ_LINK_LIST) $(LDFLAGS) $(LIBS)
 
 %.o: %.c
-	$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
+	$(CC) -c $< -o $@ -std=gnu11 $(CFLAGS) $(CPPFLAGS)
 
 %.o: %.S
 	$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)

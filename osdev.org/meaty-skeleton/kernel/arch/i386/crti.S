@@ -8,7 +8,7 @@
 .global _init
 .type _init, @function
 _init:
-	push %rdi
+	push %esp
 	movl %esp, %ebp
 	/* gcc will nicely put the contents of crtbegin.o's .init section here. */
 
@@ -16,6 +16,6 @@ _init:
 .global _fini
 .type _fini, @function
 _fini:
-	push %rdi
+	push %esp
 	movl %esp, %ebp
 	/* gcc will nicely put the contents of crtbegin.o's .fini section here. */

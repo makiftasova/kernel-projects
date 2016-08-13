@@ -10,4 +10,5 @@
 
 # Development Environment
 * Fedora 24 with Linux Kernel 4.6.4 (kernel-4.6.4-301.fc24.x86_64)
+* see osdev.org/README.md for more info about building projects
 * Plain text editor with syntax highlighting support
