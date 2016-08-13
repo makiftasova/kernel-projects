@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-as --32 boot.s -o boot.o # build in 32 bit mode
-gcc -m32 -c kernel.c -o kernel.o -O2 -ffreestanding -nostdlib -Wall -Wextra
-ld -m elf_i386 -T linker.ld boot.o kernel.o -o kernel.bin
+
+i686-elf-as boot.s -o boot.o
+i686-elf-gcc -c kernel.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
+i686-elf-gcc -T linker.ld -o kernel.bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
