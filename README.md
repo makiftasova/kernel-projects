@@ -7,8 +7,9 @@
 * NASM	 (tested with v2.12)
 * GNU LD (tested with v2.26.1)
 * GNU AS (tested with v2.26.1)
+* xorriso(tested with v1.4.4)
 
 # Development Environment
-* Fedora 24 with Linux Kernel 4.6.4 (kernel-4.6.4-301.fc24.x86_64)
+* Fedora 24 with Linux Kernel 4.6.6 (kernel-4.6.6-301.fc24.x86_64)
 * see osdev.org/README.md for more info about building projects
 * Plain text editor with syntax highlighting support

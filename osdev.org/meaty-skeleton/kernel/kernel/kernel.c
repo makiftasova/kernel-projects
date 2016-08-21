@@ -16,5 +16,5 @@ void kernel_early(void) {
 }
 
 void kernel_main(void) {
-    printf("Welcome to he Tasovix Kernel\n");
+    printf("Welcome to the Tasovix Kernel\n");
 }
